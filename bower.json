@@ -17,6 +17,11 @@
   "dependencies": {
     "bootstrap-sass": "latest",
     "font-awesome": "latest",
-    "style-library": "*"
+    "style-library": "*",
+    "bootstrap": "latest",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0"
   }
 }

@@ -1,0 +1,62 @@
+// Core variables and mixins
+@import "../lib/bootstrap-sass/lib/_variables";
+@import "../lib/bootstrap-sass/lib/_mixins";
+
+//Variables
+$checkbox-radius:0px;
+$checkbox-select-color: #333;
+
+
+// Reset
+@import "../lib/bootstrap-sass/lib/_normalize";
+//@import "../lib/bootstrap-sass/lib/_print";
+
+// Core CSS
+@import "../lib/bootstrap-sass/lib/_scaffolding";
+@import "../lib/bootstrap-sass/lib/_type";
+@import "../lib/bootstrap-sass/lib/_code";
+@import "../lib/bootstrap-sass/lib/_grid";
+@import "../lib/bootstrap-sass/lib/_tables";
+@import "../lib/bootstrap-sass/lib/_forms";
+@import "../lib/bootstrap-sass/lib/_buttons";
+
+// Components
+@import "../lib/bootstrap-sass/lib/_component-animations";
+@import "../lib/bootstrap-sass/lib/_glyphicons";
+@import "../lib/bootstrap-sass/lib/_dropdowns";
+@import "../lib/bootstrap-sass/lib/_button-groups";
+@import "../lib/bootstrap-sass/lib/_input-groups";
+@import "../lib/bootstrap-sass/lib/_navs";
+@import "../lib/bootstrap-sass/lib/_navbar";
+@import "../lib/bootstrap-sass/lib/_breadcrumbs";
+@import "../lib/bootstrap-sass/lib/_pagination";
+@import "../lib/bootstrap-sass/lib/_pager";
+@import "../lib/bootstrap-sass/lib/_labels";
+@import "../lib/bootstrap-sass/lib/_badges";
+@import "../lib/bootstrap-sass/lib/_jumbotron";
+@import "../lib/bootstrap-sass/lib/_thumbnails";
+@import "../lib/bootstrap-sass/lib/_alerts";
+@import "../lib/bootstrap-sass/lib/_progress-bars";
+@import "../lib/bootstrap-sass/lib/_media";
+@import "../lib/bootstrap-sass/lib/_list-group";
+@import "../lib/bootstrap-sass/lib/_panels";
+@import "../lib/bootstrap-sass/lib/_wells";
+@import "../lib/bootstrap-sass/lib/_close";
+
+// Components w/ JavaScript
+@import "../lib/bootstrap-sass/lib/_modals";
+@import "../lib/bootstrap-sass/lib/_tooltip";
+@import "../lib/bootstrap-sass/lib/_popovers";
+//@import "../lib/bootstrap-sass/lib/_carousel";
+
+// Utility classes
+@import "../lib/bootstrap-sass/lib/_utilities";
+@import "../lib/bootstrap-sass/lib/_responsive-utilities";
+
+//My components
+@import "../lib/style-library/sass/_common";
+ 
+.speech-bubble{
+    @include triangle-border-left;
+    border:1px solid #ccc;
+}

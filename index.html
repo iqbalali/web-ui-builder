@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link rel="stylesheet" href="lib/bootstrap-sass/dist/css/bootstrap.min.css" -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sass/style.scss.css">
+    <!--
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    -->
+    <title></title>
+</head>
+<body>
+    <header id="pageheader">
+    </header>
+    
+    <!-- Content in here -->
+    
+     <div class="container">
+       <div class="speech-bubble">
+           Some text to go in the bubble
+         </div>
+         
+         Some content
+         
+         <div class="popover top">
+      <div class="arrow"></div>
+      
+      <div class="popover-content">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+     
+         <form action="">
+         <input type="checkbox" id="me" /><label for="me">Checkbox</label>
+         </form>
+
+    </div> <!-- /container -->    
+    
+    <!-- End: Content in here -->
+    
+    
+    <footer id="pagefooter">
+    </footer>
+    
+    <!-- Load jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="lib/jquery/dist/jquery.min.js"><\/script>')</script>
+    
+    <!-- Load Twitter Bootstrap JS -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>    $.fn.modal || document.write('<script src="lib/bootstrap-sass/dist/js/bootstrap.min.js">\x3C/script>')</script>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                                                                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                               e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                               e.src='//www.google-analytics.com/analytics.js';
+                               r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    
+    <!-- Include the various modules for the page -->
+    <script> 
+    $(function(){
+      //Insert header
+      $("#pageheader").load("_head.html"); 
+        
+      //Insert footer
+      $("#pagefooter").load("_foot.html"); 
+    });
+    </script>
+    
+    <!-- Scripts specific  -->
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>

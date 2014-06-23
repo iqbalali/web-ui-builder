@@ -1,0 +1,438 @@
+/* ========================================================== */
+/* = Import normalize baseline and grid                    = */
+/* ========================================================== */
+// CSS Reset
+@import "../lib/bootstrap/less/normalize.less";
+//Core variables and Mixins
+@import "../lib/bootstrap/less/variables.less";
+@import "../lib/bootstrap/less/mixins.less";
+//Iqbal specific Font icons are imported
+@import "../lib/bootstrap/less/components/common-components.less";
+@import "components/icomoon.less";
+
+
+//@import "components/speech-bubble-triangles.less"
+// Grid system and page structure
+//@import "bootstrap/scaffolding.less";
+@import "bootstrap/grid.less";
+
+@import "bootstrap/type.less";
+@import "bootstrap/carousel.less";
+
+@import "bootstrap/component-animations.less";
+//@import "bootstrap/variables.less";
+
+//@import "bootstrap/modals.less";
+//@import "bootstrap/forms.less";
+//@import "components/social-links.less";
+
+@import "bootstrap/buttons.less";
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+
+//
+@import "woocommerce/woocommerce.less";
+
+@import "wordpress_components/navbar.less";
+@import "wordpress_components/woocommerce.less";
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+.heading-font(){
+	font-family: 'Bree Serif', serif;
+}
+@grid-columns:              12;
+@grid-gutter-width:         0;
+@hero_desc_bg_color:#444;
+@radius: 5px;
+
+
+//Define variables here. These will override 
+//defaults set for modules etc.
+//Check the top of each modules file to see what to override
+@main-page-gutter: 8px;
+@base-radius: 3px;
+html {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+a{
+	color:#428bca;
+}
+a:hover{
+	color:#2a6496;
+}
+h1,
+.tagline{
+	.heading-font;
+	text-transform: uppercase;
+}
+header{
+	#inner-header{
+		.clearfix;
+	}
+	.heading-font;
+	position:relative;
+	p#logo{
+		text-align: center;
+		margin: 13px 10px;
+	}
+	a{
+		text-decoration: none;
+	}
+	.tagline{
+		display:block;
+		clear:both;
+		color:#ccc;
+		text-transform: uppercase;
+	}
+	nav{
+		.radius(@base-radius);
+		li a:hover, &:focus {
+			.radius(@base-radius);
+		} 
+		
+	}
+	.social-panel{
+		position:absolute;
+		top:0;
+		right:8px;
+	}
+
+
+	ul.nav-right li.active {
+		.radius(@base-radius);
+		background-color:@bg-nav-highlight-color;
+		a {
+			
+			color:@txt-nav-highlight-color;
+			&:hover{
+				background-color:#efefef;
+			}
+			.cart-link{
+				border-left:1px solid #999;
+				display:inline-block;
+				margin-left:8px;
+				padding-left:12px;
+				text-decoration:underline;
+			}
+		}
+		a.cart-contents{
+			&:before{
+				.icon-cart;
+				padding-right:6px;
+				color:#555;
+			}
+		}
+	}
+
+	
+
+} 
+
+button{
+  .btn;
+}
+
+body{
+	background-color:#efefef;
+}
+div#container{
+	background-color:#fff;
+  	.container;
+  	
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+	height:2em;
+	border:1px solid #ccc;
+}
+.lost_password{
+	display: block;
+	margin-top: 2em;
+}
+#content{
+	margin: 0 17px;
+}
+.carousel_container{
+	.row;
+	margin: @main-page-gutter;
+	margin-bottom:0;
+	border:2px solid #ccc;
+}
+.social-area{
+	.row;
+	border-top: 1px dotted #ccc;
+	padding:17px 17px 0 17px;
+	border-bottom: 1px dotted #ccc;
+	margin: 0 @main-page-gutter;
+	.sign-up-txt{
+		display:block;
+		/*float:left;*/
+		padding-top: 5px;
+		padding-right: 15px;
+	}
+	.social-panel{
+		margin-top:10px;
+		h2{
+			font-size: 1em;
+			margin: 0;
+			padding: 13px 5px 0 0;
+			/*padding: 9px 5px 0 18px;*/
+			float:left;
+		}
+		ul{
+			float:left;
+		}
+	}
+}
+.mc4wp-form{
+	margin:0;
+	display:block;
+	.clearfix;
+	width:100%;
+	label{
+		.hide-me;
+	}
+	.form-container{
+		
+		input[type="email"]{
+			padding:5px 3px;
+			display:inline-block;
+			width:84%;
+			height:auto;
+		}
+		input[type="submit"]{
+			padding:4px 3px;
+		}
+	}
+	.mc4wp-notice{
+		.triangle-border-top(@borderColor:#bce8f1, @bgColor:#d9edf7, @pos:20px, @border:1px, @size:15px );
+		background:#d9edf7;
+		padding:8px;
+		border:1px solid #bce8f1;
+		margin-bottom:10px;
+	}
+	.mc4wp-success{
+		.triangle-border-top(@borderColor:#bce8f1, @bgColor:#DFF0D8, @pos:20px, @border:1px, @size:15px );
+		background:#DFF0D8;
+		padding:8px;
+		border:1px solid #bce8f1;
+		margin-bottom:10px;
+	}
+	.mc4wp-error{
+		.triangle-border-top(@borderColor:#eed3d7, @bgColor:#f2dede, @pos:20px, @border:1px, @size:15px );
+		background:#f2dede;
+		padding:8px;
+		border:1px solid #eed3d7;
+		margin-bottom:10px;
+	}
+}
+.carousel{
+  img{
+    width:100%;
+  }
+}
+#carousel_main{
+	.carousel-indicators,
+	.carousel-caption{
+		display:none;
+	}
+	.carousel-inner {
+	  height: 100%;
+	}
+
+	.item {
+	  .transition(.6s ease-in-out top);
+	}
+
+	.active {
+	  top: 0;
+	}
+
+	.next {
+	  top: 200px;
+	}
+
+	.prev {
+	  top: -200px;
+	}
+
+	.next.left,
+	.prev.right {
+	  top: 0;
+	}
+
+	.active.left {
+	  top: -200px;
+	}
+
+	.active.right {
+	  top: 200px;
+	}
+
+	.item {
+	    left: 0;
+	}
+}
+
+.post {
+	margin: 0 16px 2em 8px;
+	padding: 10px;
+	border:1px solid #efefef;
+	.box-shadow(1px 2px 2px 2px #efefef);
+	h2{
+		margin-top:5px;
+		.heading-font;
+		text-transform: uppercase;
+	}
+
+	.carousel{
+		position:relative;
+
+	}
+	.carousel .special{
+		.box-shadow(1px 2px 2px 2px rgba(0,0,0,0.15));
+		display:block;
+		position:absolute;
+		bottom:10px;
+		right:-6px;
+		background: #CC0033;
+		padding: 6px 25px;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+		font-size:1.2em;
+		font-weight:bold;
+		a{
+			color: #fff;
+			text-decoration: none;
+			&:after {
+				padding-left:5px;
+				.icon-arrow-right();
+				font-size:0.9em;
+			}
+		}
+
+		del .amount{
+			color:#ccc;
+		}
+		ins{
+			text-decoration:none;
+		}
+		&:before {
+			content: "";
+			border:19px solid red;
+			border-right-width:2px;
+			border-color:#e57f99 #e57f99 #e57f99 transparent;
+			position: absolute;
+			top:3px;
+			left:-21px;
+		}
+		&:after {
+			content: "";
+			border: 6px solid red;
+			border-color: @price-band-behind transparent transparent transparent;
+			border-left-width: 0;
+			position: absolute;
+			right: 0;
+			bottom: -12px;
+		}
+
+	}
+
+}
+.mailchimp-social,
+#tweet_feed,
+.facebook-feed{
+	padding:10px 0;
+	margin:10px;
+	margin-right:20px;
+}
+.mailchimp-social{
+	margin-top:0;
+	padding-top:0;
+}
+.mailchimp-social{
+	margin-bottom:1.5em;
+	.sign-up-txt {
+		margin-bottom:5px;
+		.heading-font;
+		font-size:1em;
+	}
+}
+.twitter-social{
+	margin-bottom:2em;
+	#tweet_feed{
+		.social-speech-container;
+	} 
+}
+
+
+.homepage-main-content {
+	margin-top: 35px;
+	padding-top: 10px;
+}
+
+.facebook-feed{
+	ul{
+		padding:0;
+		margin:0;
+	}
+	.simpul-facebook{
+		h3{
+			display:none;
+		}
+		ul{
+			.list-inline;
+			li{
+				margin-bottom:10px;
+				padding:10px;
+				border-bottom:1px dotted #fff;
+				img{
+					width:100%;
+				}
+				&:last-child{
+					border:0;
+				}
+			}
+			.simpul-facebook-post-link{
+				font-size:0.8em;
+			}
+		}
+
+	} 
+}
+
+
+.side-social{
+	.twitter,
+	.facebook{
+		margin: -5px 0 11px 21px;
+		a:before{
+			font-size:1.2em;
+		}
+		a span{
+			width:4em;
+			position:static;
+			.heading-font;
+			font-size: 0.45em;
+			display:inline-block;
+		}
+	}
+
+}
+.sidebar-container{
+	.social-speech-container;
+}
+footer{
+	border-top: 1px dotted #ccc;
+	margin-top:15px;
+	padding: 25px;
+	p.copyright{
+		font-size: 0.9em;
+		font-style: italic;
+		color: #999;
+	}
+}
+
