@@ -1,0 +1,17 @@
+{
+  "name": "web-ui-builder",
+  "description": "Base web ui project for wireframes, onwards!",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-nodeunit": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-imageoptim": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-sass": "latest",
+    "grunt-svgstore": "latest",
+    "bower":"latest"
+  }
+}
