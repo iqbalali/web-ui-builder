@@ -1,5 +1,6 @@
-// Core variables and mixins
-@import "../lib/bootstrap-sass/lib/_variables";
+
+@import "_variables";
+
 @import "../lib/bootstrap-sass/lib/_mixins";
 
 //Variables
@@ -47,7 +48,7 @@ $checkbox-select-color: #333;
 @import "../lib/bootstrap-sass/lib/_modals";
 @import "../lib/bootstrap-sass/lib/_tooltip";
 @import "../lib/bootstrap-sass/lib/_popovers";
-//@import "../lib/bootstrap-sass/lib/_carousel";
+@import "../lib/bootstrap-sass/lib/_carousel";
 
 // Utility classes
 @import "../lib/bootstrap-sass/lib/_utilities";
@@ -55,8 +56,170 @@ $checkbox-select-color: #333;
 
 //My components
 @import "../lib/style-library/sass/_common";
- 
+@import "../lib/style-library/sass/_notification-bar";
+
+//@import "_bootstrap-em";
+
+
 .speech-bubble{
     @include triangle-border-left;
-    border:1px solid #ccc;
+
 }
+
+.icon-document-pdf{height:4em}
+
+.col{
+    @include make-md-column(6);
+    h2,h3{
+        margin:5px 0 10px 0;
+        font-size:1.2em;
+        font-weight:bold;
+    }
+    .list-group{
+        margin:0;
+    }
+    .list-group-item{
+        @include clearfix();
+        .date{
+            @include make-md-column(3);
+            border-right:1px solid $list-group-border; 
+        }
+        .whats-on{
+            @include make-md-column(9);
+                padding-left:20px;
+        }
+    }
+    .calendar{
+        .pager{
+            margin-top:10px;
+        }
+        .pager li > a, .pager li > span{
+            padding:0;
+            border:0;
+        }
+        .pager li > a:hover{
+            background:transparent;
+        }
+    }
+    .calendar,
+    .lunch,
+    .reports,
+    .letters{
+        margin:10px 0 35px 0;
+    }
+    .lunch{
+   	 	background-color:$gray-lighter;
+	}
+	.reports,
+    .letters{
+    	ul{
+            @include list-no-style;
+        }
+        li{
+            padding-bottom:10px;
+            border-bottom: 1px solid $gray-lighter;
+        }
+        li.active{
+            background-color:$gray-lighter;
+            padding:6px;
+        }
+        li:last{
+            border:0;
+        }
+ 
+    }
+    
+}
+.container{
+   
+    @extend .center-block;
+    .navbar{
+        @include make-md-column(2);
+        padding:0;
+ 
+        @media(min-width: $screen-md) {
+            background:transparent;
+        	border:none;
+            ul{
+                @extend .nav-pills;
+                li{
+                    
+                    margin-right:15px;
+                    a{
+                        border-radius:0;
+                       min-height:6em;
+                       background-color:$gray-lighter;
+                        .heading{
+                            font-weight:bold;
+                        }
+                        .minor{
+                            display:inline-block;
+                            clear:left;
+                            font-style:italic;
+                        }
+                    }
+                    &.active a{
+       					background-color:$nav-pills-active-link-hover-bg;
+                   		@include triangle-border-right($bgColor:$nav-pills-active-link-hover-bg,$pos:10px);
+                       	margin-right:0;
+                   }
+                }
+                li.settings{
+                    a{
+                        background-color:darken($gray-lighter, 10%);
+                    }
+                }
+               
+                
+
+           }
+        }
+        
+    }   
+    .content-main{
+        @include make-md-column(7);
+        padding:0;
+    }
+    .sidebar{
+        @include make-md-column(3);
+       
+        @include clearfix();
+        background:#efefef;
+        padding:10px;
+        min-height:15em;
+        .profile-pic{
+            @include make-xs-column(6);
+            img{width:100%}
+			float:none;
+			margin: 0 auto;
+        }
+        h2{
+            text-align:center;
+            font-size:1.2em;
+            @extend .bold;
+        }
+        h3{
+            font-size:$font-size-base;
+        }
+    }
+    
+}
+  
+.arrow-down{
+    &:before{
+        content:"";
+        @include arrow-down($size:8px, $color:$link-color, $increase-length-by:0);
+    }
+    &:hover{
+    	&:before{
+            @include arrow-down($size:8px, $color:$link-hover-color, $increase-length-by:0);
+        }    
+    }
+}
+
+    
+    
+    
+    
+    
+    

@@ -6,38 +6,300 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- link rel="stylesheet" href="lib/bootstrap-sass/dist/css/bootstrap.min.css" -->
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="sass/style.scss.css">
+    
+    <link rel="stylesheet" href="css/style.css">
     <!--
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     -->
+    
     <title></title>
 </head>
 <body>
+    <div id="svgContainer" style="display:none">
+    </div>
     <header id="pageheader">
     </header>
     
     <!-- Content in here -->
     
      <div class="container">
-       <div class="speech-bubble">
-           Some text to go in the bubble
+         <div class="navbar navbar-default" role="navigation">
+             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+              </div>
+              <div class="main-nav navbar-collapse collapse" role="navigation">
+                   <nav>
+                   <ul class="nav nav-pills nav-stacked">
+                       <li class="active">
+                           <a href="#">
+                               <span class="heading">Rafi Ali <span class="badge">2</span></span>
+                               <span class="minor">Pre-prep School</span>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <span class="heading">Horatio Smith</span>
+                               <span class="minor">Junior School</span>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <span class="heading">Rafi Ali </span>
+                               <span class="minor">Senior School</span>
+                           </a>
+                       </li>
+                       <li class="settings">
+                           <a href="#">
+                               <span class="heading">You, the parent <span class="badge">1</span></span>
+                               <span class="minor">Parents Association, Parents Handbook etc.</span>
+                           </a>
+                       </li>
+                       <li class="settings">
+                           <a href="#">
+                               <span class="heading">Settings </span>
+                               <span class="minor">Change password, update contact details etc.</span>
+                           </a>
+                       </li>
+                   </ul>
+                   </nav>
+               </div>
+       </div>
+       <div class="content-main">
+           <div class="notification-bar">
+               Some notification.
+              
+               <a href="" class="close">
+                   <svg class="icon icon-close">
+                       <use xlink:href="#icon-close"></use>
+                   </svg>
+               </a>
+              
+           </div>
+           <div id="hero_carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#hero_carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#hero_carousel" data-slide-to="1"></li>
+                    <li data-target="#hero_carousel" data-slide-to="2"></li>
+                 </ol>
+                
+                <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNzc3O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+OTAweDUwMDwvdGV4dD48L3N2Zz4=" alt="">
+                      <div class="carousel-caption">
+                        ...
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNzc3O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+OTAweDUwMDwvdGV4dD48L3N2Zz4=" alt="">
+                      <div class="carousel-caption">
+                        ...
+                      </div>
+                    </div>
+                    ...
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#hero_carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#hero_carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+            </div>
+           
+           <div class="col">
+               <div class="calendar">
+                   <h2>This week...</h2>
+                   <ul class="list-group">
+                       <li class="list-group-item">
+                           <span class="date">
+                               MON<br />2 Jul
+                           </span>
+                           <span class="whats-on">
+                               Sports Day
+                           </span>
+                       </li>
+                       <li class="list-group-item">
+                           <span class="date">
+                               TUE<br />3 Jul
+                           </span>
+                           <span class="whats-on">
+                               Sports Day
+                           </span>
+                       </li>
+                       <li class="list-group-item">
+                           <span class="date">
+                               WED<br />4 Jul
+                           </span>
+                           <span class="whats-on">
+                               Sports Day
+                           </span>
+                       </li>
+                       <li class="list-group-item">
+                           <span class="date">
+                               THU<br />5 Jul
+                           </span>
+                           <span class="whats-on">
+                               Sports Day
+                           </span>
+                       </li>
+                       <li class="list-group-item">
+                           <span class="date">
+                               FRI<br />6 Jul
+                           </span>
+                           <span class="whats-on">
+                               Sports Day
+                           </span>
+                       </li>
+                   </ul>
+                   <ul class="pager">
+                      <li class="previous"><a href="#">&larr; Last week</a></li>
+                      <li class="next"><a href="#">Next week &rarr;</a></li>
+                    </ul>
+               </div>
+               <div class="lunch alert">
+                   <h2>Today’s lunch</h2>
+                    Cod and chips. Vegetarian option is Vegetable Couscous. 
+                    <a href="">View lunches for the week</a>
+               </div>
+           </div>
+           <div class="col">
+               <div class="reports">
+                   <h2>Reports</h2>
+                   <ul class="list">
+                       <li class="active">
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Summer Term 2014</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Spring Term 2014</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Winter Term 2013</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Autumn Term 2013</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                   </ul>
+                   <a href="#" class="arrow-down">
+                           Older letters
+                   </a>
+               </div>
+               <div class="letters">
+                   <h2>Letters</h2>
+                   <ul class="list">
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Summer Term 2014</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Spring Term 2014</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Winter Term 2013</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#" class="icon-container">
+                               <svg class="icon icon-document-pdf">
+                                  <use xlink:href="#icon-document-pdf"></use>
+                               </svg>
+                               <div class="icon-label">
+                               
+                               <span class="bold">Autumn Term 2013</span><br />
+                               Lorem ipsum dolce deruum et sit amet.
+                               </div> 
+                           </a>
+                       </li>
+                   </ul>
+                   <a href="#" class="arrow-down">
+                           Older letters
+                   </a>
+               </div>
+           </div>
          </div>
-         
-         Some content
-         
-         <div class="popover top">
-      <div class="arrow"></div>
       
-      <div class="popover-content">
-        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-    </div>
-     
-         <form action="">
-         <input type="checkbox" id="me" /><label for="me">Checkbox</label>
-         </form>
+       <div class="sidebar">
+           <div class="profile-pic">
+               <img src="img/profile_placeholder.png" alt="" class="img-circle" />
+           </div>
+           <h2>Rafi Ali</h2>
+           <div class="alert">
+               <h3>Medical History</h3>
+               <p>Allergies: peanuts, uncooked eggs, rabbit, shellfish.</p>
+           </div>
+        
+       </div>
+         
+   
 
     </div> <!-- /container -->    
     
@@ -70,6 +332,7 @@
     $(function(){
       //Insert header
       $("#pageheader").load("_head.html"); 
+      $("#svgContainer").load("svg/svg-defs.svg"); 
         
       //Insert footer
       $("#pagefooter").load("_foot.html"); 
